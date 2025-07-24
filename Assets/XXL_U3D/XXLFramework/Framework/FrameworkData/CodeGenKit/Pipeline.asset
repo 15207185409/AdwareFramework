@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621f3f918dd5423d93a746ad8fc9082d, type: 3}
+  m_Name: Pipeline
+  m_EditorClassIdentifier: 
+  CurrentTask:
+    ShowLog: 0
+    IsPanel: 1
+    Status: 0
+    GameObject: {fileID: 0}
+    From: 0
+    NameToFullName: []
+    BindInfos:
+    - TypeName: UnityEngine.UI.Text
+      PathToRoot: Text
+      BindObj: {fileID: 0}
+      MemberName: Text
+    - TypeName: UnityEngine.UI.Button
+      PathToRoot: Button
+      BindObj: {fileID: 0}
+      MemberName: Button
+    BindDetails:
+    - BindObj: {fileID: 0}
+      ComponentNames:
+      - UnityEngine.RectTransform
+      - UnityEngine.CanvasRenderer
+      - UnityEngine.UI.Text
+      ComponentNameIndex: 2
+      ComponentName: UnityEngine.UI.Text
+    - BindObj: {fileID: 0}
+      ComponentNames:
+      - UnityEngine.RectTransform
+      - UnityEngine.CanvasRenderer
+      - UnityEngine.UI.Image
+      - UnityEngine.UI.Button
+      ComponentNameIndex: 3
+      ComponentName: UnityEngine.UI.Button
+    ScriptsFolder: Assets/XXL_U3D/Game/Scripts/Panels
+    PrefabFolder: Assets/XXL_U3D/Game/PanelPrefabs
+    GeneratePrefab: 0
+    ScriptName: Panel
+    Namespace: XXLFramework
+    MainCode: 
+    DesignerCode: 

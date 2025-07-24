@@ -1,0 +1,11 @@
+namespace XXLFramework
+{
+	public class #SCRIPTNAME# : AbstractCommand
+	{
+		protected override void OnExecute()
+		{
+			//执行
+
+		}
+	}
+}

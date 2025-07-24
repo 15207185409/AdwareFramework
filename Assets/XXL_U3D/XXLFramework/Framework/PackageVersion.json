@@ -1,0 +1,19 @@
+{
+    "Id": "",
+    "Version": "1.0.0",
+    "Type": 0,
+    "AccessRight": 0,
+    "DownloadUrl": "",
+    "InstallPath": "Assets/XXL_U3D/XXLFramework/Framework/",
+    "IncludeFileOrFolders": [
+        "Assets/XXL_U3D/XXLFramework/Framework"
+    ],
+    "DocUrl": "https://.com",
+    "Readme": {
+        "version": "1.0.0",
+        "content": "XXLFramework初版框架",
+        "author": "HuChunJie",
+        "date": "2024 年 02 月 21 日 12:08",
+        "PackageId": ""
+    }
+}

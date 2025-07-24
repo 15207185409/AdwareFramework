@@ -1,0 +1,15 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace XXLFramework
+{
+	public  class #SCRIPTNAME# : MonoBehaviour
+	{
+		private void Start()
+		{
+			// please add init code here
+
+		}
+					
+	}
+}

@@ -1,0 +1,31 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+namespace XXLFramework
+{
+	public class #SCRIPTNAME#Data : BasePanelData
+	{
+	}
+	public partial class #SCRIPTNAME# : BasePanel
+	{
+		private void Start()
+		{
+			// please add init code here
+		}
+		
+		protected override void OnInit(IPanelData uiData = null)
+		{
+			#SCRIPTNAME#Data data = uiData as #SCRIPTNAME#Data ?? new #SCRIPTNAME#Data();
+			// 当需要用到外部数据初始化Panel时在此初始化
+		}
+		
+		protected override void OnOpen(IPanelData uiData = null)
+		{
+		}
+		
+		protected override void OnClose(bool destroy)
+		{
+		}
+	}
+}

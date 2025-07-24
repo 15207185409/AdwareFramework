@@ -1,0 +1,10 @@
+namespace XXLFramework
+{
+	public class #SCRIPTNAME# : Architecture<#SCRIPTNAME#>
+	{
+		protected override void Init()
+		{
+			
+		}
+	}
+}

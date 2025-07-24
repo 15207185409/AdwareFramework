@@ -1,0 +1,11 @@
+namespace XXLFramework
+{
+	public class #SCRIPTNAME# : AbstractModel
+	{
+		protected override void OnInit()
+		{
+			//初始化
+
+		}
+	}
+}
