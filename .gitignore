@@ -1,0 +1,68 @@
+# ================
+# Unity 项目通用 .gitignore
+# ================
+
+# Unity 自动生成的文件
+/[Ll]ibrary/         # 所有 Library 目录（包含 PackageCache）
+/[Tt]emp/            # 临时文件
+/[Oo]bj/             # 编译中间文件
+/[Bb]uild[sl]/       # 匹配 Build/ 和 Builds/
+/[Ll]ogs/            # 日志文件
+/[Uu]ser[Ss]ettings/ # 用户特定设置
+
+# 防御性规则（防止误添加）
+**/[Ll]ibrary/**
+**/[Tt]emp/**
+
+### 2. 必须保留的 Unity 核心文件 ###
+!/[Pp]rojectSettings/ # 项目设置（重要！）
+!/[Aa]ssets/          # 资源目录（但需过滤子项）
+
+### 3. IDE 和编辑器文件 ###
+# Visual Studio
+*.csproj
+*.sln
+*.suo
+*.userprefs
+.vs/
+.vscode/
+
+# Rider/JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.DotSettings*
+
+### 4. 操作系统文件 ###
+.DS_Store             # macOS
+._*                   # macOS 隐藏文件
+Thumbs.db             # Windows
+Desktop.ini           # Windows
+
+### 5. 包管理相关 ###
+/[Pp]ackages/         # 本地包缓存（Unity 2018+）
+/[Pp]ackage[Cc]ache/  # Unity 包缓存目录
+manifest.json.bak     # 包清单备份文件
+Packages/packages-lock.json
+
+### 6. 需要特别注意的例外 ###
+# 保留 .meta 文件（Unity 必须）
+!*.[Mm]eta
+
+### 7. 其他自动生成内容 ###
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/* # Addressables
+/[Aa]ssets/[Ss]treamingAssets/aa/          # AssetBundles
+*.stackdump                                # 崩溃报告
+/*.[Cc]rash[Rr]eport.*                     # Unity 崩溃报告
+
+# .NET 编译临时目录
+[Bb]in/
+[Oo]bj/
+
+#生成的Release文件
+#/Release
+
+
+
