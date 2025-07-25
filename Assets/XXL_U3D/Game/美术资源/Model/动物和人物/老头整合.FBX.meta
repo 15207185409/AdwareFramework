@@ -14,7 +14,7 @@ ModelImporter:
     second: walk
   - first:
       74: -6239216113759591374
-    second: attack
+    second: repair
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -141,7 +141,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: attack
+      name: repair
       takeName: Take 001
       internalID: 0
       firstFrame: 96

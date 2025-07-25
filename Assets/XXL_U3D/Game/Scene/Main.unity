@@ -839,7 +839,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0411e3eebf01595448367965f7b3b43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 0
+  currentHealth: 0
+  attackDamage: 10
+  attackRange: 2
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  attackCooldown: 1
   Joystick: {fileID: 2086951696}
   Animator: {fileID: 1657476844}
   moveSpeed: 5
   rotationSmoothness: 10
+  detectionRadius: 5
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
