@@ -1,0 +1,5 @@
+男主持斧动画说明
+idle   0-50
+walk  55-79
+attack  84-101
+walk  attack   106-121
