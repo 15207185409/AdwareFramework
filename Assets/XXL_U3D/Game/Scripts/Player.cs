@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XXLFramework.Game;
 
-public class Player : MonoBehaviour
+public class Player : LivingBeling
 {
     public DynamicJoystick Joystick;
     public Animator Animator;
