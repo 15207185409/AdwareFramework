@@ -31,8 +31,9 @@ namespace XXLFramework.Game
         private const string Walk = "walk";
         private const string Attack = "attack";
         
-        void Start()
+        protected override void Start()
         {
+            base.Start(); // 调用基类Start方法初始化生命值和攻击属性
             rb = GetComponent<Rigidbody>();
             animator = GetComponent<Animator>();
             patrolCenter = transform.position;
@@ -44,6 +45,10 @@ namespace XXLFramework.Game
             {
                 playerTarget = player.transform;
             }
+            
+            // 注册事件
+            OnHealthChanged += OnHealthChange;
+            OnDied += OnEnemyDied;
         }
         
         void Update()
@@ -125,7 +130,7 @@ namespace XXLFramework.Game
                 Player player = playerTarget.GetComponent<Player>();
                 if (player != null)
                 {
-                    player.TakeDamage(attackDamage);
+                    player.TakeDamage(attackDamage); // 使用基类属性
                 }
             }
             
@@ -174,7 +179,7 @@ namespace XXLFramework.Game
         }
         
         // 检测范围（用于可视化）
-        private float detectionRadius = 10f;
+        public float detectionRadius = 10f; // 使用public以便在Inspector中调整
         
         // 在Scene视图中可视化检测范围和攻击范围
         private void OnDrawGizmosSelected()
@@ -191,10 +196,27 @@ namespace XXLFramework.Game
         // 重写死亡方法
         protected override void Die()
         {
-            // 播放死亡动画或销毁对象
+            base.Die(); // 调用基类Die方法触发事件
+            OnEnemyDied(); // 执行Enemy特有的死亡逻辑
+        }
+        
+        // 生命值变化回调
+        private void OnHealthChange(float currentHealth, float maxHealth)
+        {
+            // 可以在这里添加受伤效果，比如播放受伤动画
             if (animator != null)
             {
-                animator.Play("die"); // 假设有死亡动画
+                animator.SetTrigger("Hurt"); // 假设有受伤动画触发器
+            }
+        }
+        
+        // 死亡回调
+        private void OnEnemyDied()
+        {
+            // 播放死亡动画并销毁对象
+            if (animator != null)
+            {
+                animator.SetTrigger("Die"); // 假设有死亡动画触发器
                 Destroy(gameObject, 1f); // 1秒后销毁
             }
             else
