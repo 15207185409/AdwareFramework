@@ -14,7 +14,7 @@ namespace XXLFramework.Game
         public System.Action OnDied;
         
         // Start is called before the first frame update
-        void Start()
+        protected virtual void Start()
         {
             // 初始化当前生命值为最大生命值
             CurrentHealth = MaxHealth;
